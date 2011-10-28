@@ -1,6 +1,6 @@
 # Tapestry Heroku App #
 
-This is a basic [Tapestry](http://tapestry.apache.org) application, a modified version of the standard Tapestry Quickstart archetype, with minor
+This is a basic [Tapestry 5.3](http://tapestry.apache.org) application, a modified version of the standard Tapestry Quickstart archetype, with minor
 changes to allow it to deploy onto [Heroku](http://heroku.com). It is based on version **5.3-beta-30**.
 
 The main change is support for the Maven [appassembler-maven-plugin](http://mojo.codehaus.org/appassembler/appassembler-maven-plugin/assemble-mojo.html)
