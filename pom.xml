@@ -6,7 +6,7 @@
     <version>1.0-SNAPSHOT</version>
     <packaging>war</packaging>
     <name>herokuapp Tapestry 5 Application</name>
-        <dependencies>
+    <dependencies>
         <!-- Too set up an application with a database, change the artifactId below to
              tapestry-hibernate, and add a dependency on your JDBC driver. You'll also
              need to add Hibernate configuration files, such as hibernate.cfg.xml. -->
@@ -63,8 +63,24 @@ of testing facilities designed for use with TestNG (http://testng.org/), so it's
             <groupId>javax.servlet</groupId>
             <artifactId>servlet-api</artifactId>
             <version>${servlet-api-release-version}</version>
-            <scope>provided</scope>
         </dependency>
+
+        <dependency>
+            <groupId>org.eclipse.jetty</groupId>
+            <artifactId>jetty-server</artifactId>
+            <version>${jettyVersion}</version>
+        </dependency>
+        <dependency>
+            <groupId>org.eclipse.jetty</groupId>
+            <artifactId>jetty-webapp</artifactId>
+            <version>${jettyVersion}</version>
+        </dependency>
+        <dependency>
+            <groupId>org.eclipse.jetty</groupId>
+            <artifactId>jetty-servlet</artifactId>
+            <version>${jettyVersion}</version>
+        </dependency>
+
 
         <!-- Provide dependency to the Tapestry javadoc taglet which replaces the Maven component report -->
         <dependency>
@@ -79,9 +95,9 @@ of testing facilities designed for use with TestNG (http://testng.org/), so it's
         <finalName>herokuapp</finalName>
         <plugins>
 
-          <!-- This part is not in the Tapestry quickstart archetype;
-          it is the plugin that executes under the Heroku Cedar stack
-          to obtain dependencies and create the "slug". -->
+            <!-- This part is not in the Tapestry quickstart archetype;
+     it is the plugin that executes under the Heroku Cedar stack
+     to obtain dependencies and create the "slug". -->
             <plugin>
                 <groupId>org.codehaus.mojo</groupId>
                 <artifactId>appassembler-maven-plugin</artifactId>
@@ -172,5 +188,6 @@ of testing facilities designed for use with TestNG (http://testng.org/), so it's
         <servlet-api-release-version>2.5</servlet-api-release-version>
         <testng-release-version>5.14.9</testng-release-version>
         <easymock-release-version>3.0</easymock-release-version>
+        <jettyVersion>7.3.1.v20110307</jettyVersion>
     </properties>
 </project>
