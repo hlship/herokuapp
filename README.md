@@ -11,4 +11,5 @@ container ... instead, a script is used to launch an embedded version of [Jetty]
 your application. The Java class used to start Jetty is also part of this project. 
 Heroku and the Maven plugin take care of all the details for you.
 
-Deployment requires the Heroku [Cedar stack](http://devcenter.heroku.com/articles/cedar).
+Deployment requires the Heroku [Cedar stack](http://devcenter.heroku.com/articles/cedar). 
+Please reference their [getting started guide](http://devcenter.heroku.com/articles/java).
