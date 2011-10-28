@@ -4,7 +4,8 @@
     <groupId>org.example</groupId>
     <artifactId>herokuapp</artifactId>
     <version>1.0-SNAPSHOT</version>
-    <packaging>war</packaging>
+    <!-- Normally "war", changed to "jar" for Heroku -->
+    <packaging>jar</packaging>
     <name>herokuapp Tapestry 5 Application</name>
     <dependencies>
         <!-- Too set up an application with a database, change the artifactId below to
