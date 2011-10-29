@@ -114,7 +114,7 @@ of testing facilities designed for use with TestNG (http://testng.org/), so it's
                     <!-- This is useful early on, as it enables full exception reporting and other features.
                          See web.xml for details on who this turns into which Tapestry IoC modules will be loaded. -->
                     <extraJvmArguments>
-                        -Dtapestry.execution-mode=development
+                        -Xms256m -Xmx512m -XX:MaxPermSize=250m -Dtapestry.execution-mode=development
                     </extraJvmArguments>
                 </configuration>
                 <executions>
