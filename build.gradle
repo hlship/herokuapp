@@ -9,7 +9,7 @@ apply plugin: "idea"
 // Setup Heroku cedar stack support
 defaultTasks 'install'
 
-mainClassName = "com.howardlewisship.tapx.heroku.JettyMain"
+mainClassName = "com.howardlewiship.tapx.heroku.JettyMain"
 applicationName = "app"
 
 sourceCompatibility = "1.5"
