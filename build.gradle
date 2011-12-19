@@ -6,9 +6,6 @@ apply plugin: "jetty"
 apply plugin: "application"
 apply plugin: "idea"
 
-// Setup Heroku cedar stack support
-defaultTasks 'install'
-
 mainClassName = "com.howardlewiship.tapx.heroku.JettyMain"
 applicationName = "app"
 
@@ -87,4 +84,4 @@ ideaModule {
     javaVersion = "inherited"
 }
 
-// TODO: Configure execution mode for jettyRun task
+task stage(dependsOn: ['installApp'])
