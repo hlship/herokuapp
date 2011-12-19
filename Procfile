@@ -1,1 +1,1 @@
-web: sh target/bin/main
+web: ./build/install/app/bin/app

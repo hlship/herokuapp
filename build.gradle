@@ -3,6 +3,14 @@ description = "herokuapp application"
 apply plugin: "war"
 apply plugin: "java"
 apply plugin: "jetty"
+apply plugin: "application"
+apply plugin: "idea"
+
+// Setup Heroku cedar stack support
+defaultTasks 'install'
+
+mainClassName = "com.howardlewisship.tapx.heroku.JettyMain"
+applicationName = "app"
 
 sourceCompatibility = "1.5"
 targetCompatibility = "1.5"
@@ -45,13 +53,15 @@ sourceSets {
 
 dependencies {
 
-    compile "org.apache.tapestry:tapestry-core:5.3-beta-30"
+    compile "org.apache.tapestry:tapestry-core:5.3"
 
     // This adds automatic compression of JavaScript and CSS in production mode:
-    compile "org.apache.tapestry:tapestry-yuicompressor:5.3-beta-30"
+    compile "org.apache.tapestry:tapestry-yuicompressor:5.3"
+
+    compile "com.howardlewisship:tapx-heroku:1.2-SNAPSHOT"
 
     // Uncomment this to add support for file uploads:
-    // compile "org.apache.tapestry:tapestry-upload:5.3-beta-30"
+    // compile "org.apache.tapestry:tapestry-upload:5.3"
 
     provided "javax.servlet:servlet-api:2.5"
 }
@@ -69,6 +79,12 @@ test {
     jvmArgs("-XX:MaxPermSize=256M")
 
     enableAssertions = true
+}
+
+
+ideaModule {
+    scopes.PROVIDED.plus += configurations.provided
+    javaVersion = "inherited"
 }
 
 // TODO: Configure execution mode for jettyRun task
