@@ -1,8 +1,6 @@
 description = "herokuapp application"
 
-apply plugin: "war"
 apply plugin: "java"
-apply plugin: "jetty"
 apply plugin: "application"
 apply plugin: "idea"
 
